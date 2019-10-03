@@ -18,12 +18,16 @@ def process(selection)
     when "3"
       save_students()  
     when "4"
-      load_students()  
+      puts "What file would you like to load in?"
+      file = gets.chomp  
+      load_students(file)  
     when "9"
       exit
     else
       puts "I don't know what you mean, try again"
   end
+  puts "successful operation"
+  puts "--------------------"
 end
 
 def input_students
@@ -78,7 +82,7 @@ def print_menu
   puts "1. Input the students"
   puts "2. Show the students"
   puts "3. Save the students to students.csv"
-  puts "4. Load the students from students.csv"
+  puts "4. Load the students from a file"
   puts "9. Exit" # 9 because we'll be adding more items
 end
 
